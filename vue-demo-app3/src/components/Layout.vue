@@ -3,17 +3,15 @@
     <img src="../logo.png" width="30" />
     <h1>Demo3</h1>
     <p class="msg">{{ msg }}</p>
-    <Home />
+    {{ msg }}
   </div>
 </template>
 
 <script>
 import { ref } from "vue";
-import Home from './Home'
 
 export default {
   components: { 
-    Home
   },
   setup() {
     const msg = ref('say my name')
