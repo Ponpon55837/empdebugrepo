@@ -4,6 +4,9 @@
     <h1>Demo3</h1>
     <p class="msg">{{ msg }}</p>
     {{ msg }}
+
+    <p>{{ show }}</p>
+    <button @click="setShow">Click</button>
   </div>
 </template>
 
@@ -15,8 +18,15 @@ export default {
   },
   setup() {
     const msg = ref('say my name')
+
+    const show = ref('show message')
+    const setShow = () => {
+      console.log('1')
+      show.value = 'it can not change'
+      console.log('2')
+    }
   
-    return { msg }
+    return { msg, show, setShow }
   },
 };
 </script>
